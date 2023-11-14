@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+h1,
+h2 {
+    font-weight: 1.5em;
+    color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+    background: #dddd;
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 30px;
+    animation: dor 3s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0 cover 45%;
+}
+
+section.modulo p {
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+section.modulo h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+section.modulo.content {
+    padding: 40px 0;
+    background: rgb(70, 70, 73)
+}
+
+section.modulo.parallax {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h1 {
+    color: purple;
+    text-align: center;
+    font-size: 70px;
+    text-transform: uppercase;
+    text-shadow: 10px 10px 10px #000000;
+    z-index: 50;
+}
+
+section.modulo.parallax::after {
+
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000000 100%);
+}
+
+
+
+
+
+
+
+
+section.modulo.parallax-1 {
+    background: url(https://i0.wp.com/animeprofile.com.br/wp-content/uploads/2023/10/Jujutsu-Kaisen-Satoru-Gojo-aparece-em-prova-de-fisica.png?resize=696%2C392&ssl=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+section.modulo.parallax-2 {
+    background: url(https://sm.ign.com/t/ign_br/screenshot/default/imagem-2023-10-09-103636524_25rn.960.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.modulo.parallax-3 {
+    background: url(https://i0.wp.com/nerdiario.com/wp-content/uploads/2023/02/Captura-de-tela-2023-02-04-133025.png?resize=800%2C389&ssl=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes dor {
+    from {
+        translate: -100vw 0;
+        color: rgb(0, 255, 204);
+        opacity: 0;
+    }
+
+    to {
+        translate: 0 0;
+        opacity: 1;
+    }
+
+
+}
+
+@media all and (max-width: 760px) {
+
+    section.modulo p {
+        margin-bottom: 10px;
+        text-align: justify;
+        font-size: 1em;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    section.modulo.parallax h1 {
+        color: aqua;
+        text-align: center;
+        font-size: 2em;
+        text-transform: uppercase;
+        text-shadow: 7px 7px 7px #000000;
+        z-index: 50;
+    }
+
+    section.modulo.parallax-1 {
+        background-image: url(https://i0.wp.com/animeprofile.com.br/wp-content/uploads/2023/10/Jujutsu-Kaisen-Satoru-Gojo-aparece-em-prova-de-fisica.png?resize=696%2C392&ssl=1);
+    }
+
+    section.modulo.content {
+        width: 90%;
+    }
+
+}
